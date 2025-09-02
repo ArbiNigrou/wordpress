@@ -7,13 +7,19 @@
             <h2><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></h2>
         </header>
         <footer>
-            <p class="post-info"><?php the_author_posts_link(); ?> | <?php the_date() ?></p> 
+            <p class="post-info"><?php the_author_posts_link(); ?> | <?php the_time() ?></p> 
         </footer>
+        <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('full'); ?>
+        </a>
         <content>
             <p>
-                <?php the_content(); ?>
+                <?php the_content('lire la suite...'); ?>
             </p>
-        </content>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </header>
+        </content>
+    <br>
+    <hr>
+    <?php comments_template(); ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </header>
     </article>
 
 <?php endwhile; ?>
