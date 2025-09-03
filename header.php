@@ -26,3 +26,4 @@
     </header>
 
     <div class="mainContent">
+        <div class="content">
